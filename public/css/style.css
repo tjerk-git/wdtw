@@ -730,6 +730,7 @@ textarea:not([rows]) {
     max-width: 900px;
     margin: 4rem auto;
     padding: 0 2rem;
+    color:white!important;
   }
 
   .blog-post-image {
@@ -747,11 +748,9 @@ textarea:not([rows]) {
   .blog-post-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: var(--groen-2);
   }
 
   .post-meta {
-    color: #666;
     margin-bottom: 2rem;
     font-size: 1.1rem;
   }
@@ -793,14 +792,9 @@ textarea:not([rows]) {
   }
 
   .back-link {
-    color: var(--groen-2);
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-
-  .back-link:hover {
-    color: var(--groen-1);
+    color:#F3F7F8;
   }
 
   .read-more {
@@ -869,9 +863,7 @@ textarea:not([rows]) {
     background-color: var(--roze);
   }
 
-  .bg-geel {
-    background-color: var(--geel);
-  }
+
 
   /* Adjust text colors for better contrast on colored backgrounds */
   .bg-rood .blog-post-content h1,

@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>@yield('title', 'WDTW')</title>
     </head>
-    <body class="{{ Request::is('blog/*') ? 'bg-' . ['rood', 'groen', 'blauw', 'roze', 'geel'][array_rand(['rood', 'groen', 'blauw', 'roze', 'geel'])] : '' }}">
+    <body class="{{ Request::is('blog/*') ? 'bg-' . ['rood', 'groen', 'blauw', 'roze'][array_rand(['rood', 'groen', 'blauw', 'roze'])] : '' }}">
         <div class="menu-overlay">
             <div class="menu-content">
                 <nav class="overlay-menu">
