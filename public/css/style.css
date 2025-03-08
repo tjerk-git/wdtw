@@ -245,10 +245,13 @@ textarea:not([rows]) {
     width: 50%;
     height: 100%;
     display: flex;
-    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem;
-    position: relative;
+
   }
 
   .overlay-menu {
@@ -256,10 +259,6 @@ textarea:not([rows]) {
   }
 
   .social-icons {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     gap: 3rem;
   }
@@ -291,9 +290,6 @@ textarea:not([rows]) {
     transition: color 0.3s ease;
   }
 
-  .overlay-menu ul li a:hover {
-    color: var(--groen-1);
-  }
 
   .menu-video {
     width: 50%;
