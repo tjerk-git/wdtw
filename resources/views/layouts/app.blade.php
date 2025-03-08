@@ -27,7 +27,7 @@
             </div>
             <div class="menu-video">
                 <video autoplay muted loop playsinline>
-                    <source src="{{ asset('video/wdtw.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('video/comp1.mp4') }}" type="video/mp4">
                 </video>
             </div>
         </div>
