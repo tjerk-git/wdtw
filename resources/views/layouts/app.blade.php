@@ -50,7 +50,7 @@
             <div class="tickets-container">
                 <nav>
                     <ul>
-                        <li><a class="call_to_action" href="#">Tickets</a></li>
+                        <li><a class="call_to_action" href="https://forms.office.com/e/fts4mV0vjY">Tickets</a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,24 +62,14 @@
 
         <footer>
             <div class="marquee-container">
-                <div class="marquee-item">
-                    <span>WDTW</span>
-                </div>
-                <div class="marquee-item">
-                    <span>WDTW</span>
-                </div>
-                <div class="marquee-item">
-                    <span>WDTW</span>
-                </div>
-                <div class="marquee-item">
-                    <span>WDTW</span>
-                </div>
-                <div class="marquee-item">
-                    <span>WDTW</span>
-                </div>
-                <div class="marquee-item">
-                    <span>WDTW</span>
-                </div>
+                @php
+                    $marqueeItems = explode(',', \App\Models\Settings::getSetting('marquee_items', 'WDTW'));
+                @endphp
+                @foreach(array_merge($marqueeItems, $marqueeItems) as $item)
+                    <div class="marquee-item">
+                        <span>{{ trim($item) }}</span>
+                    </div>
+                @endforeach
             </div>
         </footer>
     </body>

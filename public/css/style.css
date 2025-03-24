@@ -449,12 +449,11 @@ textarea:not([rows]) {
 
   .marquee-container {
     display: flex;
-    height: 100%;
-    align-items: center;
-    gap: 5rem;
+    gap: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
     animation: marquee 20s linear infinite;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
+    padding: 1rem;
   }
 
   .marquee-container:hover {
@@ -462,15 +461,14 @@ textarea:not([rows]) {
   }
 
   .marquee-item {
-    font-size: 1.5rem;
-    color: var(--groen-2);
-    font-weight: 200;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
   }
 
-  .marquee-item span{
-    display: inline-block;
+  .marquee-item span {
+    font-size: 2rem;
+    color: var(--groen-2);
   }
 
   @keyframes marquee {
@@ -479,6 +477,16 @@ textarea:not([rows]) {
     }
     100% {
       transform: translateX(-50%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Marquee */
+    .marquee-container {
+      padding: 0.5rem;
+    }
+    .marquee-item {
+      font-size: 1.5rem;
     }
   }
 
