@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Filament\Resources\SettingsResource\Pages;
+namespace App\Filament\Admin\Resources\SettingsResource\Pages;
 
-use App\Filament\Resources\SettingsResource;
+use App\Filament\Admin\Resources\SettingsResource;
 use App\Models\Settings;
-use Filament\Resources\Pages\Page;
+use Filament\Resources\Pages\ManageRecords;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Form;
 use Filament\Forms;
 use Filament\Notifications\Notification;
 
-class ManageSettings extends Page implements HasForms
+class ManageSettings extends ManageRecords implements HasForms
 {
     use InteractsWithForms;
 

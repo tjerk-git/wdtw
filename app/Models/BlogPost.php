@@ -12,9 +12,15 @@ class BlogPost extends Model
 
     protected $fillable = [
         'title',
-        'body',
-        'image',
         'slug',
+        'content',
+        'published',
+        'published_at',
+    ];
+
+    protected $casts = [
+        'published' => 'boolean',
+        'published_at' => 'datetime',
     ];
 
     protected static function boot()
