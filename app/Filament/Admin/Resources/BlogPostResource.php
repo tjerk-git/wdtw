@@ -31,13 +31,13 @@ class BlogPostResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->unique(ignoreRecord: true),
+                        Forms\Components\FileUpload::make('image')
+                            ->image()
+                            ->directory('blog-images')
+                            ->columnSpanFull(),
                         Forms\Components\RichEditor::make('content')
                             ->required()
                             ->columnSpanFull(),
-                        Forms\Components\Toggle::make('published')
-                            ->default(false),
-                        Forms\Components\DateTimePicker::make('published_at')
-                            ->nullable(),
                     ])
             ]);
     }
@@ -48,13 +48,10 @@ class BlogPostResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image')
+                    ->circular(),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
-                Tables\Columns\IconColumn::make('published')
-                    ->boolean(),
-                Tables\Columns\TextColumn::make('published_at')
-                    ->dateTime()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -64,9 +61,7 @@ class BlogPostResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->filters([
-                Tables\Filters\TernaryFilter::make('published'),
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),

@@ -14,13 +14,7 @@ class BlogPost extends Model
         'title',
         'slug',
         'content',
-        'published',
-        'published_at',
-    ];
-
-    protected $casts = [
-        'published' => 'boolean',
-        'published_at' => 'datetime',
+        'image',
     ];
 
     protected static function boot()
