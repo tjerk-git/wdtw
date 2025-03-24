@@ -13,13 +13,9 @@
         
         <div class="blog-post-content">
             <h1>{{ $post->title }}</h1>
-            <div class="post-meta">
-                <time datetime="{{ $post->created_at->format('Y-m-d') }}">
-                    {{ $post->created_at->format('F j, Y') }}
-                </time>
-            </div>
+
             <div class="post-body">
-                {!! $post->body !!}
+                {!! $post->content !!}
             </div>
             
             <div class="post-footer">

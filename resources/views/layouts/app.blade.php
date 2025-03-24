@@ -13,22 +13,30 @@
             <div class="menu-content">
                 <nav class="overlay-menu">
                     <ul>
-                        <li><a href="{{ url('/#updates') }}">Updates</a></li>
-                        <li><a href="{{ url('/#playground') }}">Playground</a></li>
-                        <li><a href="{{ url('/#about') }}">About</a></li>
-                        <li><a href="{{ url('/#contact') }}">Contact</a></li>
+                        <li><a href="https://forms.office.com/e/fts4mV0vjY" target="_blank">Tickets</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-vimeo"></i></a>
+                    <a href="https://www.instagram.com/cmd_lwd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/nhlstendendbkv/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/nhlstendendocenttheater/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/wdtw/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
             <div class="menu-video">
                 <video autoplay muted loop playsinline>
                     <source src="{{ asset('video/comp1.mp4') }}" type="video/mp4">
                 </video>
+                <div class="menu-text-about">
+                    <h1>{{ \App\Models\Settings::getSetting('about_title', 'About') }}</h1>
+                    <p>{{ \App\Models\Settings::getSetting('about_content', 'We are a group of friends who love to play and have fun.') }}</p>
+                </div>
+                <div class="menu-text-contact">
+                    <h1>{{ \App\Models\Settings::getSetting('contact_title', 'Contact') }}</h1>
+                    <p>{{ \App\Models\Settings::getSetting('contact_content', 'Get in touch with us.') }}</p>
+                </div>
             </div>
         </div>
         <header>

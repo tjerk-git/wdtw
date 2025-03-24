@@ -84,6 +84,38 @@ class ManageSettings extends ManageRecords implements HasForms
                             ->helperText('Add items one by one and press Enter, or separate multiple items with commas')
                             ->columnSpanFull(),
                     ]),
+
+                Forms\Components\Section::make('About Section')
+                    ->description('Content for the About section in the menu')
+                    ->schema([
+                        Forms\Components\TextInput::make('about_title')
+                            ->label('Title')
+                            ->required()
+                            ->default('About')
+                            ->live(),
+                        Forms\Components\Textarea::make('about_content')
+                            ->label('Content')
+                            ->required()
+                            ->default('We are a group of friends who love to play and have fun.')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                    ]),
+
+                Forms\Components\Section::make('Contact Section')
+                    ->description('Content for the Contact section in the menu')
+                    ->schema([
+                        Forms\Components\TextInput::make('contact_title')
+                            ->label('Title')
+                            ->required()
+                            ->default('Contact')
+                            ->live(),
+                        Forms\Components\Textarea::make('contact_content')
+                            ->label('Content')
+                            ->required()
+                            ->default('Get in touch with us.')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                    ]),
             ])
             ->statePath('data');
     }
@@ -96,6 +128,10 @@ class ManageSettings extends ManageRecords implements HasForms
             'playground_section_title' => Settings::getSetting('playground_section_title', 'PLAYGROUND'),
             'playground_section_content' => Settings::getSetting('playground_section_content'),
             'marquee_items' => explode(',', Settings::getSetting('marquee_items', 'WDTW')),
+            'about_title' => Settings::getSetting('about_title', 'About'),
+            'about_content' => Settings::getSetting('about_content', 'We are a group of friends who love to play and have fun.'),
+            'contact_title' => Settings::getSetting('contact_title', 'Contact'),
+            'contact_content' => Settings::getSetting('contact_content', 'Get in touch with us.'),
         ];
     }
 

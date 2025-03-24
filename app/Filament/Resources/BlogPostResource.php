@@ -40,7 +40,7 @@ class BlogPostResource extends Resource
                     ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg', 'image/webp'])
                     ->maxSize(5120) // 5MB
                     ->columnSpanFull(),
-                Forms\Components\RichEditor::make('body')
+                Forms\Components\RichEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
             ]);

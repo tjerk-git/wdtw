@@ -295,6 +295,8 @@ textarea:not([rows]) {
     width: 50%;
     height: 100%;
     overflow: hidden;
+    position:relative;
+    background-color: var(--groen-2);
   }
 
   .menu-video video {
@@ -900,3 +902,26 @@ textarea:not([rows]) {
   .bg-blauw .post-footer {
     border-color: rgba(255, 255, 255, 0.2);
   }
+
+.menu-text-about,
+.menu-text-contact {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    z-index: 2;
+    font-size:1.5rem;
+    padding:2rem;
+}
+
+.menu-text-about.active,
+.menu-text-contact.active {
+    display: block;
+}
+
+.menu-video video.hidden {
+    display: none;
+}

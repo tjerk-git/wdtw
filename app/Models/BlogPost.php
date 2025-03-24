@@ -15,6 +15,13 @@ class BlogPost extends Model
         'slug',
         'content',
         'image',
+        'type',
+        'is_published',
+    ];
+
+    protected $casts = [
+        'type' => 'string',
+        'is_published' => 'boolean',
     ];
 
     protected static function boot()
@@ -26,5 +33,10 @@ class BlogPost extends Model
                 $post->slug = Str::slug($post->title);
             }
         });
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('is_published', true);
     }
 }

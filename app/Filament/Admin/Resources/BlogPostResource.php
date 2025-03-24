@@ -27,6 +27,17 @@ class BlogPostResource extends Resource
                         Forms\Components\TextInput::make('title')
                             ->required()
                             ->maxLength(255),
+                        Forms\Components\Select::make('type')
+                            ->options([
+                                'update' => 'Update',
+                                'event' => 'Event',
+                            ])
+                            ->required()
+                            ->default('update'),
+                        Forms\Components\Toggle::make('is_published')
+                            ->label('Published')
+                            ->default(false)
+                            ->helperText('Only published posts will be visible on the website'),
                         Forms\Components\TextInput::make('slug')
                             ->required()
                             ->maxLength(255)
@@ -51,10 +62,17 @@ class BlogPostResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image')
-                    ->disk('public')
-                    ->circular(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                    ->disk('public'),
+                Tables\Columns\TextColumn::make('type')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'event' => 'success',
+                        'update' => 'info',
+                    }),
+                Tables\Columns\IconColumn::make('is_published')
+                    ->boolean()
+                    ->label('Published')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

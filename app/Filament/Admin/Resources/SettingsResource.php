@@ -44,6 +44,28 @@ class SettingsResource extends Resource
                             ->label('Items')
                             ->required(),
                     ]),
+                Forms\Components\Section::make('About Section')
+                    ->schema([
+                        Forms\Components\TextInput::make('about_title')
+                            ->label('Title')
+                            ->required()
+                            ->default('About'),
+                        Forms\Components\Textarea::make('about_content')
+                            ->label('Content')
+                            ->required()
+                            ->default('We are a group of friends who love to play and have fun.'),
+                    ]),
+                Forms\Components\Section::make('Contact Section')
+                    ->schema([
+                        Forms\Components\TextInput::make('contact_title')
+                            ->label('Title')
+                            ->required()
+                            ->default('Contact'),
+                        Forms\Components\Textarea::make('contact_content')
+                            ->label('Content')
+                            ->required()
+                            ->default('Get in touch with us.'),
+                    ]),
             ]);
     }
 
