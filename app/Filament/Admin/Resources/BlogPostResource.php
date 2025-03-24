@@ -33,6 +33,7 @@ class BlogPostResource extends Resource
                             ->unique(ignoreRecord: true),
                         Forms\Components\FileUpload::make('image')
                             ->image()
+                            ->disk('public')
                             ->directory('blog-images')
                             ->columnSpanFull(),
                         Forms\Components\RichEditor::make('content')
@@ -49,6 +50,7 @@ class BlogPostResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image')
+                    ->disk('public')
                     ->circular(),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
