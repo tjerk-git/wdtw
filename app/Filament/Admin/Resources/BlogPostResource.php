@@ -33,6 +33,7 @@ class BlogPostResource extends Resource
                             ->unique(ignoreRecord: true),
                         Forms\Components\FileUpload::make('image')
                             ->image()
+                            ->acceptedFileTypes(['image/heic', 'image/png', 'image/jpeg'])
                             ->disk('public')
                             ->directory('blog-images')
                             ->columnSpanFull(),
