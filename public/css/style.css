@@ -455,7 +455,6 @@ textarea:not([rows]) {
     overflow: hidden;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
-    padding: 1rem;
   }
 
   .marquee-container:hover {
@@ -465,7 +464,7 @@ textarea:not([rows]) {
   .marquee-item {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
+ 
   }
 
   .marquee-item span {

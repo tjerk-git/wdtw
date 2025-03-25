@@ -22,7 +22,7 @@
                     <a href="https://www.instagram.com/cmd_lwd/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.instagram.com/nhlstendendbkv/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.instagram.com/nhlstendendocenttheater/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/wdtw/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://nl.linkedin.com/company/ydtw-wdtw" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
             <div class="menu-video">
