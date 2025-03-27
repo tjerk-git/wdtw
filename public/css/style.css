@@ -774,7 +774,7 @@ textarea:not([rows]) {
 
   .post-body h2,
   .post-body h3 {
-    color: var(--white);
+    color: white;
     margin: 2rem 0 1rem;
   }
 
