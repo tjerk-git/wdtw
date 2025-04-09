@@ -13,7 +13,7 @@
             <div class="menu-content">
                 <nav class="overlay-menu">
                     <ul>
-                        <li><a href="https://forms.office.com/e/fts4mV0vjY" target="_blank">Tickets</a></li>
+                        <li><a href="https://tickets.emaly.co/cmdlwd" target="_blank">Tickets</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -58,7 +58,7 @@
             <div class="tickets-container">
                 <nav>
                     <ul>
-                        <li><a class="call_to_action" href="https://forms.office.com/e/fts4mV0vjY">Tickets</a></li>
+                        <li><a class="call_to_action" href="https://tickets.emaly.co/cmdlwd" target="_blank">Tickets</a></li>
                     </ul>
                 </nav>
             </div>
