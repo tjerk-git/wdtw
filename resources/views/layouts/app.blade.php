@@ -30,11 +30,9 @@
                     <source src="{{ asset('video/comp1.mp4') }}" type="video/mp4">
                 </video>
                 <div class="menu-text-about">
-                    <h1>{{ \App\Models\Settings::getSetting('about_title', 'About') }}</h1>
                     <p>{{ \App\Models\Settings::getSetting('about_content', 'We are a group of friends who love to play and have fun.') }}</p>
                 </div>
                 <div class="menu-text-contact">
-                    <h1>{{ \App\Models\Settings::getSetting('contact_title', 'Contact') }}</h1>
                     <p>{{ \App\Models\Settings::getSetting('contact_content', 'Get in touch with us.') }}</p>
                 </div>
             </div>
