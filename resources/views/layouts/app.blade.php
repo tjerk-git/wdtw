@@ -16,6 +16,7 @@
                         <li><a href="https://tickets.emaly.co/cmdlwd" target="_blank">Tickets</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="{{ asset('timetable-wdtw.pdf') }}">Timetable</a></li>
                     </ul>
                 </nav>
                 <div class="social-icons">
@@ -49,6 +50,7 @@
                     <ul>
                         <li><a href="{{ url('/#updates') }}">Updates</a></li>
                         <li><a href="{{ url('/#playground') }}">Playground</a></li>
+                        <li><a href="{{ asset('timetable-wdtw.pdf') }}">Timetable</a></li>
                     </ul>
                 </nav>
             </div>

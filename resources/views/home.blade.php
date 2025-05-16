@@ -6,6 +6,10 @@
         <video src="{{ asset('video/wdtw.mp4') }}" autoplay muted loop playsinline class="full-video"></video>
     </section>
 
+    <section class="timetable_section">
+        <a href="{{ asset('timetable-wdtw.pdf') }}" target="_blank"><h1>Timetable</h1></a>
+    </section>
+
     <section class="events_section" id="updates">
         <h1>{{ \App\Models\Settings::getSetting('events_section_title', 'UPDATES') }}</h1>
 
